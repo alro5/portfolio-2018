@@ -3,6 +3,15 @@
   font-family: 'Noto Serif', serif;
 }
 
+::selection {
+  background: $color--primary;
+  color: #fff;
+}
+::-moz-selection {
+  background: $color--primary;
+  color: #fff;
+}
+
 html {
     font-size: 16px;
 }
@@ -38,4 +47,10 @@ body {
 
 img {
   max-width: 100%;
+}
+
+.flex-wrap--tabletPortrait {
+  @include tabletPortrait {
+    flex-wrap: wrap;
+  }
 }

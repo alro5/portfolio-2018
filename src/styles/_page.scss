@@ -3,8 +3,20 @@ div[role="main"] {
   header {
     text-align: center;
     padding: 50px 0;
+    @include tabletPortrait {
+      padding: 0 0 $gutter--d;
+    }
     .title {
       display: inline-block;
+    }
+    .avatar {
+      width: 150px;
+      border-radius: 100%;
+      margin: 40px auto 0;
+      display: block;
+      @include tabletPortrait {
+        width: 100px;
+      }
     }
     h1,
     h2 {
@@ -39,9 +51,57 @@ div[role="main"] {
     }
   }
 
-  .profile__image {
+  .sidebar {
     min-width: 300px;
     padding-left: $gutter--d;
+    @include tabletPortrait {
+      min-width: 100%;
+      text-align: center;
+      padding-left: 0;
+    }
+    .details {
+      text-align: left;
+    }
+  }
+
+  nav {
+    text-align: center;
+    margin-bottom: $gutter--d;
+    ul {
+      list-style-type: none;
+      display: inline-flex;
+      padding: 0;
+      margin: 0;
+      li {
+        margin: 0 $gutter;
+        a {
+          @include transition(background color, 200ms ease);
+          color: $color--primary;
+          text-decoration: none;
+          padding: 5px;
+          background: transparent;
+          border-radius: 3px;
+          &:hover {
+            background: $color--primary;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  .animation__block {
+    @include transition(opacity transform, 300ms ease);
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    &.fade-out {
+      opacity: 0;
+      transform: translate3d(-50px, 0, 0);
+    }
+    &.fade-in {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
   }
 
 }

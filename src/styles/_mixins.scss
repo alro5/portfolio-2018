@@ -1,0 +1,37 @@
+@mixin transition($properties, $settings, $will-change: false) {
+    $full-prop-list: ();
+    $slim-prop-list: ();
+    @each $prop in $properties {
+        $full-prop-list: append($full-prop-list, $prop $settings, 'comma');
+        $slim-prop-list: append($slim-prop-list, $prop, 'comma');
+    }
+    transition: $full-prop-list;
+    @if $will-change==true {
+        will-change: $slim-prop-list;
+    }
+}
+
+@mixin mobile {
+  @media only screen and (max-width: 640px) {
+    @content;
+  }
+}
+
+@mixin tabletPortrait {
+  @media only screen and (max-width: 769px) {
+    @content;
+  }
+}
+
+@mixin tabletLandscape {
+  @media only screen and (max-width: 1366px) {
+    @content;
+  }
+}
+
+@mixin font-size($sizeValue: 16, $line: $sizeValue * 1.5) {
+    font-size: ($sizeValue) + px;
+    line-height: ($line) + px;
+    font-size: ($sizeValue / 16) + rem;
+    line-height: ($line / 16) + rem;
+}

@@ -1,0 +1,56 @@
+.timeline {
+  margin-bottom: 50px;
+  @include tabletPortrait {
+    display: inline-block;
+    text-align: left;
+    margin-bottom: $gutter--d;
+  }
+  ul {
+    border-left: 1px solid $color--grey;
+    margin-left: $gutter;
+    padding-left: 0;
+    li {
+      &.timeline__item {
+        display: flex;
+        padding-left: $gutter;
+        position: relative;
+        &:not(:last-child) {
+          margin-bottom: $gutter--d;
+        }
+        &:after {
+          content: '';
+          display: block;
+          width: 5px;
+          height: 5px;
+          border-radius: 100%;
+          background: $color--grey;
+          position: absolute;
+          left: -3px;
+          top: 0;
+        }
+        div {
+          &:first-child {
+            margin-right: $gutter;
+          }
+        }
+        img {
+          max-width: 40px;
+        }
+        h4 {
+          margin: 0;
+        }
+        p {
+          margin: 0;
+          &.time,
+          &.address {          
+            @include font-size(12);  
+            color: #8e8e8e;
+          }
+          &.name {
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
+  }
+}
