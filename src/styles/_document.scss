@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Noto Serif', serif;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+  margin: 0;
+  color: $color--darkgrey;
+}
+
+.wrap__inner {
+  width: $pageWidth;
+  max-width: 100%;
+}
+
+.mx--auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.has--divider {
+  padding-bottom: $gutter--d;
+  margin-bottom: $gutter--d;
+  border-bottom: 1px solid $color--lightgrey;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex--grow {
+  flex-grow: 1;
+}
+
+img {
+  max-width: 100%;
+}

@@ -1,0 +1,15 @@
+.rt__content {
+  h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+  p {
+    line-height: 1.75rem;
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+  a {
+    color: $color--primary;
+  }
+}
