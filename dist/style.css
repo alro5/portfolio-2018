@@ -3,7 +3,8 @@
   line-height: 30px;
   font-size: 1.25rem;
   line-height: 1.875rem;
-  margin-bottom: 0.5rem; }
+  margin-bottom: 0.5rem;
+  margin-top: 0; }
   .rt__content h3 + p {
     margin-top: 0; }
 
@@ -132,6 +133,9 @@ div[role="main"] {
       margin: 0; }
       div[role="main"] nav ul li {
         margin: 0 15px; }
+        div[role="main"] nav ul li.is-active a {
+          background: #009688;
+          color: #fff; }
         div[role="main"] nav ul li a {
           transition: background 200ms ease, color 200ms ease;
           color: #009688;
@@ -142,21 +146,27 @@ div[role="main"] {
           div[role="main"] nav ul li a:hover {
             background: #009688;
             color: #fff; }
-  div[role="main"] .animation__block {
-    transition: opacity 300ms ease, -webkit-transform 300ms ease;
-    transition: opacity 300ms ease, transform 300ms ease;
-    transition: opacity 300ms ease, transform 300ms ease, -webkit-transform 300ms ease;
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0); }
-    div[role="main"] .animation__block.fade-out {
-      opacity: 0;
-      -webkit-transform: translate3d(-50px, 0, 0);
-              transform: translate3d(-50px, 0, 0); }
-    div[role="main"] .animation__block.fade-in {
-      opacity: 1;
-      -webkit-transform: translate3d(0, 0, 0);
-              transform: translate3d(0, 0, 0); }
+  div[role="main"] .animation__container {
+    transition: height 500ms ease;
+    position: relative; }
+  div[role="main"] .animation__view {
+    transition: opacity 500ms ease, -webkit-transform 500ms ease;
+    transition: opacity 500ms ease, transform 500ms ease;
+    transition: opacity 500ms ease, transform 500ms ease, -webkit-transform 500ms ease;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+    div[role="main"] .animation__view.is-active {
+      opacity: 1; }
+    div[role="main"] .animation__view.is--ready {
+      opacity: 1; }
+    div[role="main"] .animation__view.fade-out {
+      opacity: 0; }
+    div[role="main"] .animation__view.fade-in {
+      opacity: 1; }
 
 .timeline {
   margin-bottom: 50px; }
