@@ -1,9 +1,14 @@
-function calculateContainerHeight(state: string) {
+import { Portfolio } from './components/portfolio';
+import * as ReactDOM from 'react-dom';
+
+//ReactDOM.render(<Portfolio title="hej" />, document.querySelector('#main'));
+
+/* function calculateContainerHeight(state: string) {
   const container = document.querySelector(`.animation__container`) as HTMLElement;
   let activeViewInner = document.querySelector(`.animation__view.view--${state} .inner`) as HTMLElement;
 
   container.style.height = activeViewInner ? activeViewInner.offsetHeight + 'px' : void 0;
-}
+} 
 
 const menuItemsLinks: NodeListOf<Element> = document.querySelectorAll('nav ul li a');
 const menuItems: NodeListOf<Element> = document.querySelectorAll('nav ul li');
@@ -68,4 +73,4 @@ class Portfolio {
 
 }
 
-new Portfolio("home");
+new Portfolio("home"); */
