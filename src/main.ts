@@ -1,7 +1,11 @@
 import { Portfolio } from './components/portfolio';
 import * as ReactDOM from 'react-dom';
+import * as React from 'react';
 
-//ReactDOM.render(<Portfolio title="hej" />, document.querySelector('#main'));
+let foo = React.createElement(Portfolio);
+
+ReactDOM.render(foo, document.querySelector('#main'))
+// ReactDOM.createPortal(Portfolio, document.querySelector('#main'))
 
 /* function calculateContainerHeight(state: string) {
   const container = document.querySelector(`.animation__container`) as HTMLElement;
